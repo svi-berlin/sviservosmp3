@@ -4,7 +4,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "servo": "*"
+        "servo": "*",
+        "pxt-serialmp3": "github:mkleinsb/pxt-serialmp3#v0.0.8"
     },
     "files": [
         "main.blocks",
