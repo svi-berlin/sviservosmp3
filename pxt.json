@@ -1,11 +1,12 @@
 {
-    "name": "servos",
+    "name": "servos bluetenpflanzen",
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*",
         "servo": "*",
-        "pxt-serialmp3": "github:mkleinsb/pxt-serialmp3#v0.0.8"
+        "pxt-serialmp3": "github:mkleinsb/pxt-serialmp3#v0.0.8",
+        "funk": "*",
+        "v2": "*"
     },
     "files": [
         "main.blocks",
@@ -15,6 +16,10 @@
     "testFiles": [
         "test.ts"
     ],
+    "targetVersions": {
+        "target": "7.0.3",
+        "targetId": "calliopemini"
+    },
     "supportedTargets": [
         "calliopemini"
     ],

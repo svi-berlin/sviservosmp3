@@ -1,24 +1,48 @@
-function spieleIntro () {
-    serialmp3.playMp3Track(1, 1)
+function zeigeBlaetter () {
+    basic.showNumber(blaetter)
+    servos.P3.setAngle(blaetter)
+}
+function zeigeSprossachse () {
+    basic.showNumber(sprossachse)
+    servos.P3.setAngle(sprossachse)
+}
+function zeigeWurzel () {
+    basic.showNumber(wurzel)
+    servos.P3.setAngle(wurzel)
 }
 input.onButtonPressed(Button.A, function () {
-    servos.P0.setAngle(0)
-    basic.pause(500)
-    servos.P0.setAngle(90)
+    if (bauteile == 0) {
+        zeigeWurzel()
+    } else if (bauteile == 1) {
+        zeigeSprossachse()
+    } else if (bauteile == 2) {
+        zeigeBlaetter()
+    } else if (bauteile == 3) {
+        zeigeBluete()
+    } else {
+        bauteile = -1
+    }
+    bauteile += 1
 })
-function stelleFrage (num: number) {
-    serialmp3.playMp3Track(num, 2)
+function zeigeBluete () {
+    basic.showNumber(bluete)
+    servos.P3.setAngle(bluete)
 }
 input.onButtonPressed(Button.B, function () {
-    servos.P0.setAngle(180)
-    basic.pause(500)
-    servos.P0.setAngle(90)
+	
 })
-let quiznummer = 1
-serialmp3.connectSerialMp3(DigitalPin.C16, DigitalPin.C17)
-spieleIntro()
-servos.P0.setAngle(90)
-stelleFrage(quiznummer)
+let bluete = 0
+let blaetter = 0
+let sprossachse = 0
+let wurzel = 0
+let bauteile = 0
+let servo = 0
+bauteile = 0
+wurzel = 10
+sprossachse = 40
+blaetter = 60
+bluete = 80
+servos.P3.setAngle(180)
 basic.forever(function () {
 	
 })
