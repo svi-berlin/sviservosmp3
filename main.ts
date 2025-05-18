@@ -38,10 +38,10 @@ let wurzel = 0
 let bauteile = 0
 let servo = 0
 bauteile = 0
-wurzel = 10
-sprossachse = 40
+wurzel = 0
+sprossachse = 30
 blaetter = 60
-bluete = 80
+bluete = 90
 servos.P3.setAngle(180)
 basic.forever(function () {
 	
